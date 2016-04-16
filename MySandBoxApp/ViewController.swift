@@ -1,18 +1,11 @@
-//
-//  ViewController.swift
-//  MySandBoxApp
-//
-//  Created by 松尾和昭 on 16/04/2016.
-//  Copyright © 2016 kazucocoa. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let client = MyHttpBinClient()
+        client.getHttpBinGet()
     }
 
     override func didReceiveMemoryWarning() {
