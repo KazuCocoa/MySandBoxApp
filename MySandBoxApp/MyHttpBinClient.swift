@@ -1,6 +1,20 @@
 // https://httpbin.org/
 
 import Alamofire
+import Himotoki
+
+struct BinClientGet: Decodable {
+    let ip: String
+
+    // MARK: Decodable
+
+    static func decode(e: Extractor) throws -> BinClientGet {
+        print("____________\(e)")
+        return try BinClientGet(
+            ip: e <| "origin"
+        )
+    }
+}
 
 class MyHttpBinClient {
     func getHttpBinGet() {
@@ -12,7 +26,8 @@ class MyHttpBinClient {
                 print(response.result)
 
                 if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
+                    let resultIp = try? BinClientGet.decodeValue(JSON)
+                    print("[MyHttpBinClient]: ip is \(resultIp?.ip)")
                 }
         }
     }

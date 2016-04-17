@@ -6,6 +6,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let client = MyHttpBinClient()
         client.getHttpBinGet()
+
+        let githubClient = GithubClient()
+        githubClient.getPublicGist("KazuCocoa")
     }
 
     override func didReceiveMemoryWarning() {

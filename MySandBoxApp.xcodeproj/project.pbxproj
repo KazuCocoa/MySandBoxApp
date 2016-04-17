@@ -15,7 +15,6 @@
 		7253BBBE1CC14F7C00889357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7253BBBC1CC14F7C00889357 /* LaunchScreen.storyboard */; };
 		7253BBC91CC14F7D00889357 /* MySandBoxAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253BBC81CC14F7D00889357 /* MySandBoxAppTests.swift */; };
 		7253BBD41CC14F7D00889357 /* MySandBoxAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7253BBD31CC14F7D00889357 /* MySandBoxAppUITests.swift */; };
-		7276D4531CC1B0EC00CD5752 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7276D4521CC1B0EC00CD5752 /* Alamofire.framework */; };
 		7276D4541CC1B0EC00CD5752 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7276D4521CC1B0EC00CD5752 /* Alamofire.framework */; };
 		7276D4551CC1B0EC00CD5752 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7276D4521CC1B0EC00CD5752 /* Alamofire.framework */; };
 		7276D4581CC1BA1A00CD5752 /* MyHttpBinClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7276D4571CC1BA1A00CD5752 /* MyHttpBinClient.swift */; };
@@ -26,6 +25,8 @@
 		7276D45F1CC1CC4700CD5752 /* GithubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7276D45E1CC1CC4700CD5752 /* GithubClient.swift */; };
 		7276D4601CC1CC4700CD5752 /* GithubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7276D45E1CC1CC4700CD5752 /* GithubClient.swift */; };
 		7276D4611CC1CC4700CD5752 /* GithubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7276D45E1CC1CC4700CD5752 /* GithubClient.swift */; };
+		72843DBC1CC3E0BE003B40F6 /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72843DBB1CC3E0BE003B40F6 /* Himotoki.framework */; };
+		72843DBD1CC3E0BE003B40F6 /* Himotoki.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72843DBB1CC3E0BE003B40F6 /* Himotoki.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				72843DBD1CC3E0BE003B40F6 /* Himotoki.framework in Embed Frameworks */,
 				7276D45C1CC1BDF400CD5752 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -77,6 +79,7 @@
 		7276D4521CC1B0EC00CD5752 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		7276D4571CC1BA1A00CD5752 /* MyHttpBinClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHttpBinClient.swift; sourceTree = "<group>"; };
 		7276D45E1CC1CC4700CD5752 /* GithubClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubClient.swift; sourceTree = "<group>"; };
+		72843DBB1CC3E0BE003B40F6 /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7276D4531CC1B0EC00CD5752 /* Alamofire.framework in Frameworks */,
+				72843DBC1CC3E0BE003B40F6 /* Himotoki.framework in Frameworks */,
 				7276D45B1CC1BDF300CD5752 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +114,7 @@
 		7253BBA41CC14F7C00889357 = {
 			isa = PBXGroup;
 			children = (
+				72843DBB1CC3E0BE003B40F6 /* Himotoki.framework */,
 				7276D4521CC1B0EC00CD5752 /* Alamofire.framework */,
 				7253BBAF1CC14F7C00889357 /* MySandBoxApp */,
 				7253BBC71CC14F7D00889357 /* MySandBoxAppTests */,
