@@ -12,7 +12,7 @@ class ViewController: UIViewController {
         gistLits.text = "viewDidLoad\n"
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
 
         let client = MyHttpBinClient()
         client.getHttpBinGet()
@@ -21,14 +21,14 @@ class ViewController: UIViewController {
     }
 
     func getGistAndUpdateView() {
-        Alamofire.request(.GET, GithubClient().githuGist)
+        Alamofire.request(GithubClient().githuGist)
             .responseJSON { response in
                 if let JSON = response.result.value as? Array<Dictionary<String, AnyObject>> {
                     JSON.forEach { json in
                         let result = try? GitHubGist.decodeValue(json)
-                        self.gistLits.text?.appendContentsOf("url: " + (result?.url)! + "\n")
-                        self.gistLits.text?.appendContentsOf("id: " + (result?.id)! + "\n")
-                        self.gistLits.text?.appendContentsOf("owner: " + (result?.owner)! + "\n\n")
+                        self.gistLits.text?.append("url: " + (result?.url)! + "\n")
+                        self.gistLits.text?.append("id: " + (result?.id)! + "\n")
+                        self.gistLits.text?.append("owner: " + (result?.owner)! + "\n\n")
 
                     }
                 }

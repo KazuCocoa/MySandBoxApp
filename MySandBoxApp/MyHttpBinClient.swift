@@ -8,7 +8,7 @@ struct BinClientGet: Decodable {
 
     // MARK: Decodable
 
-    static func decode(e: Extractor) throws -> BinClientGet {
+    static func decode(_ e: Extractor) throws -> BinClientGet {
         print("____________\(e)")
         return try BinClientGet(
             ip: e <| "origin"
@@ -18,11 +18,11 @@ struct BinClientGet: Decodable {
 
 class MyHttpBinClient {
     func getHttpBinGet() {
-        Alamofire.request(.GET, "https://httpbin.org/ip", parameters: ["foo": "bar"])
+        Alamofire.request("https://httpbin.org/ip", method: .get, parameters: ["foo": "bar"])
             .responseJSON { response in
-                print(response.request)
-                print(response.response)
-                print(response.data)
+                print(response.request ?? "")
+                print(response.response ?? "")
+                print(response.data ?? "")
                 print(response.result)
 
                 if let JSON = response.result.value {

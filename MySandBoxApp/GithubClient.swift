@@ -11,7 +11,7 @@ struct GitHubGist: Decodable {
 
     // MARK: Decodable
 
-    static func decode(e: Extractor) throws -> GitHubGist {
+    static func decode(_ e: Extractor) throws -> GitHubGist {
         return try GitHubGist(
             url: e <| "url",
             id: e <| "id",
